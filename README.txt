@@ -30,6 +30,38 @@ touсh tests/test_sЗ.py
 
 8. пишем модуль s3.py
 
-9. можем проверить модуль через try.py
+9. при необходимости проверяем модуль через try.py
 
-10. создаем PYTHONPATH в переменной activate
+10. создаем PYTHONPATH в переменной activate, чтобы отразить расположение созданной библиотеки
+#Export PYTHONPATH
+PYTHONPATH="paws"
+export PYTHONPATH
+
+11. создаем модульный тест при помощи pytest и moto
+
+11.1. добавляем код в test_sЗ.py
+11.2. добавляем в requirements.txt новые библиотеки
+awscli
+bоtоЗ
+moto
+pytest
+pylint
+sensible
+jupyter
+pytest-cov
+pandas
+
+11.3. запускаем make install
+
+11.4. модифицируем Makefile, добавляем в него
+test:
+	PYTHONPATH=. && pytest -vv --cov=paws tests/*.py
+
+lint:
+	pylint --disable=R,C paws
+
+11.5. запускаем тесты: make test
+                        make lint
+11.6. добавляем в Makefile запуск трех действий последовательно all: install lint test
+
+12. интеграция с блокнотом Jupiter

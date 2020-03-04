@@ -1,2 +1,5 @@
 .ai-venv
 .pragai
+*__pycache__*
+.pytest_cache
+.coverage
