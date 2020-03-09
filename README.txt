@@ -65,3 +65,17 @@ lint:
 11.6. добавляем в Makefile запуск трех действий последовательно all: install lint test
 
 12. интеграция с блокнотом Jupiter
+создаем папки notebooks, data
+выполняем команду jupyter notebook
+создаем в папке notebooks  файл paws.ipynb и добавляем в него код
+
+13. в requirements/install добаяляем Click, nbval и устанавливаем библиотеки
+
+14. прописываем в Makefile
+test:
+	PYTHONPATH=. && pytest -vv --cov=paws tests/*.py
+	PYTHONPATH=. && py.test --nbval-lax notebooks/*.ipynb
+
+15. интеграция утилит командной строки
+создаем сценарий командной строки в корневом каталоге
+touch pcli.py

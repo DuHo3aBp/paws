@@ -7,3 +7,5 @@ sensible
 jupyter
 pytest-cov
 pandas
+Click
+nbval
