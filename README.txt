@@ -91,3 +91,7 @@ touch pcli.py и добавляем код
 
 16. добавление в pytest утилиту командной строки
 создаем новый файл touch tests/test_paws_cli.py
+
+добавить --cov=pcli в строку тестирования Makefile
+
+
