@@ -96,3 +96,4 @@ touch pcli.py и добавляем код
 
 17. Интеграция AWS Pipeline
 
+lets's rock!
