@@ -94,4 +94,5 @@ touch pcli.py и добавляем код
 
 добавить --cov=pcli в строку тестирования Makefile
 
+17. Интеграция AWS Pipeline
 

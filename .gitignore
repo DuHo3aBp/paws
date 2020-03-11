@@ -3,3 +3,5 @@
 *__pycache__*
 .pytest_cache
 .coverage
+./1979.csv
+./notebooks/1979.csv
