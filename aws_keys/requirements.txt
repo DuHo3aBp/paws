@@ -1,4 +1,0 @@
-aws
-boto3
-sensible
-pylint
